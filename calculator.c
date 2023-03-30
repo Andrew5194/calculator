@@ -22,7 +22,7 @@ void number_game(int x) {
     if (subtract(x,2) < 50) {
       if(divide(multiply(x,x), 3) == 12) {
         printf("%d is correct! Here is your prize!\n",  x);
-        //assert(0);
+        assert(0);
       }
     }
   }
