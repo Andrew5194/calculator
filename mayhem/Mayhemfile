@@ -9,4 +9,4 @@ tasks:
   - name: behavior_testing
   - name: coverage_analysis
 cmds:
-  - cmd: /test_calculator
+  - cmd: /test_calculator @@

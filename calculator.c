@@ -26,4 +26,5 @@ void number_game(int x) {
       }
     }
   }
+  printf("Incorrect :(\n");
 }

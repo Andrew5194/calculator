@@ -24,13 +24,27 @@ void test_divide() {
   assert(divide(4,2) == 2);
 }
 
-int main() {
-  char str[64];
-  gets(str);
+int main(int argc, char *argv[]) {
+  FILE *f;
+  char buf[12];
+
+  if(argc != 2){
+    fprintf(stderr, "Must supply a text file\n");
+    return -1;
+  }
+  f = fopen(argv[1], "r");
+  if(f == NULL){
+    fprintf(stderr, "Could not open %s\n", argv[1]);
+    return -1;
+  }
+  if(fgets(buf, sizeof(buf), f) == NULL){
+    fprintf(stderr, "Could not read from %s\n", argv[1]);
+    return -1;
+  }
   test_add();
   test_subtract();
   test_multiply();
   test_divide();
-  number_game(atoi(str));
+  number_game(atoi(buf));
   return 0;
 }
