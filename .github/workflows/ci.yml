@@ -65,7 +65,11 @@ jobs:
         with:
           mayhem-url: ${{ secrets.MAYHEM_URL }}
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
+<<<<<<< HEAD
           args: --image ${{ needs.build.outputs.image }} --file ${{ matrix.mayhemfile }} --duration 60
+=======
+          args: --image ${{ needs.build.outputs.image }} --file ${{ matrix.mayhemfile }} --duration 60 --project andrewyang/calculator --owner andrewyang
+>>>>>>> 02bc21a31ef22251ec452bc80138eb4e339efd0a
           sarif-output: sarif
           junit-output: junit
           coverage-output: coverage
