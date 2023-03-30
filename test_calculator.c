@@ -1,6 +1,6 @@
 #include <assert.h>
 #include <stdlib.h>
-#include <string.h>
+#include <stdio.h>
 
 #include "calculator.h"
 
@@ -24,12 +24,13 @@ void test_divide() {
   assert(divide(4,2) == 2);
 }
 
-int main(int argc, char *argv[]) {
-  if(argc < 2) exit(0);
+int main() {
+  char str[32];
+  gets(str);
   test_add();
   test_subtract();
   test_multiply();
   test_divide();
-  number_game(atoi(argv[1]));
+  number_game(atoi(str));
   return 0;
 }
