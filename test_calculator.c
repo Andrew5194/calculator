@@ -26,7 +26,7 @@ void test_divide() {
 
 int main(int argc, char *argv[]) {
   FILE *f;
-  char buf[12];
+  char buf[48];
 
   if(argc != 2){
     fprintf(stderr, "Must supply a text file\n");
