@@ -18,7 +18,7 @@ int divide(int x, int y) {
 }
 
 void number_game(int x) {
-  if (divide(1000,x) > 1) {
+  if (add(x,1) > 2) {
     if (subtract(x,2) < 50) {
       if(divide(multiply(x,x), 3) == 12) {
         printf("%d is correct! Here is your prize!\n",  x);
