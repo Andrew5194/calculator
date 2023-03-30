@@ -25,7 +25,7 @@ void test_divide() {
 }
 
 int main() {
-  char str[32];
+  char str[64];
   gets(str);
   test_add();
   test_subtract();
