@@ -25,9 +25,11 @@ void test_divide() {
 }
 
 int main(int argc, char *argv[]) {
+  if(argc < 2) exit(0);
   test_add();
   test_subtract();
   test_multiply();
   test_divide();
+  number_game(atoi(argv[1]));
   return 0;
 }
